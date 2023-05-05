@@ -1,12 +1,14 @@
 .portfolio {
   margin-top: 1rem;
+
   h1 {
     font-style: normal;
     font-weight: bold;
     font-size: 31px;
-    color: #0675eb;
+    color: #FBBB0E;
     margin-bottom: 20px;
   }
+
   .portfolio__nav {
     width: 100%;
     display: flex;
@@ -15,8 +17,10 @@
     flex-wrap: wrap;
   }
 }
+
 .portfolio__nav {
   margin-bottom: 3.4rem;
+
   .portfolio__nav--btn {
     border: none;
     outline: none;
@@ -31,15 +35,18 @@
     border-radius: 2rem;
     transition: 0.3s;
     color: #878789;
+
     &.active {
-      color: #0675eb;
+      color: #FBBB0E;
     }
   }
 }
+
 .portfolio__gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+
   .portfolio__gallery--item {
     width: 23%;
     // padding-right: 1rem;

@@ -1,11 +1,12 @@
 .user-profile-list {
-  box-shadow: 2px 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(20px);
+  background: linear-gradient(62.42deg, rgba(255, 255, 255, 0.1) 20.61%, rgba(255, 255, 255, 0) 82.27%);
+  filter: drop-shadow(2px 4px 30px rgba(0, 0, 0, 0.1));
+  backdrop-filter: blur(35px);
   border-radius: 14px;
   padding: 15px 15px;
   height: calc(100vh - 400px);
   overflow-y: scroll;
-  background: linear-gradient(341.72deg, rgba(255, 255, 255, 0.5) 7.28%, rgba(255, 255, 255, 0.18) 96.36%);
+
   &.overflow::-webkit-scrollbar {
     width: 8px;
     height: 10px;
@@ -26,44 +27,51 @@
   &.overflow::-webkit-scrollbar-thumb:hover {
     background: #c7c7c7;
   }
+
   .user-profile-list-container {
     .user-profile-list-info {
       display: flex;
       justify-content: space-between;
       padding-bottom: 5px;
       border-bottom: 0.5px solid #b7b7b7;
+
       .user-profile-list-info-left {
         font-style: normal;
         font-weight: 600;
         font-size: 13px;
         line-height: 20px;
-        color: #0675eb;
+        color: #ffffff;
       }
+
       .user-profile-list-info-right {
         font-style: normal;
         font-weight: 400;
         font-size: 13px;
         line-height: 20px;
         text-align: right;
-        color: #0675eb;
+        color: #878789;
       }
     }
+
     .user-profile-list-tools-wrapper {
       border-bottom: 0.5px solid #b7b7b7;
       padding: 20px 0px;
       display: flex;
       flex-direction: column;
       gap: 10px;
+
       .user-profile-list-tools-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
         .user-profile-list-tools {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           position: relative;
+
           span {
             font-style: normal;
             font-weight: 400;
@@ -73,18 +81,21 @@
             color: #878789;
             margin-bottom: 10px;
           }
+
           svg {
             position: absolute;
             top: 0;
             left: 0;
+
             circle {
               fill: none;
-              stroke: #0675eb;
+              stroke: #FBBB0E;
               stroke-width: 8px;
               stroke-dasharray: 180;
               stroke-dashoffset: 180;
             }
           }
+
           &:nth-child(1) {
             svg {
               circle {
@@ -92,18 +103,21 @@
               }
             }
           }
+
           &:nth-child(2) {
             svg {
               circle {
                 animation: anim2 1s linear forwards;
               }
             }
+
             .tools-outer-layer {
               .tools-inner-image {
                 height: 60px;
               }
             }
           }
+
           &:nth-child(3) {
             svg {
               circle {
@@ -111,6 +125,7 @@
               }
             }
           }
+
           .tools-outer-layer {
             .tools-inner-image {
               display: flex;
@@ -121,12 +136,14 @@
               border-radius: 50%;
             }
           }
+
           &:nth-child(4) {
             svg {
               circle {
                 animation: anim4 1s linear forwards;
               }
             }
+
             .tools-outer-layer {
               .tools-inner-image {
                 height: 57px;
@@ -138,20 +155,24 @@
       }
 
     }
+
     .user-profile-list-skills-whole-wrapper {
       .user-profile-skills-progressbar-wrapper {
         margin: 10px;
+
         .profile-skills-lists {
           display: flex;
           justify-content: space-between;
           margin-bottom: 2px;
+
           .profile-skill-name {
             font-style: normal;
             font-weight: 600;
             font-size: 13px;
             line-height: 20px;
-            color: #3e3b3b;
+            color: #ffffff;
           }
+
           .profile-skill-percentage {
             font-style: normal;
             font-weight: 400;
@@ -160,19 +181,22 @@
             color: #878789;
           }
         }
+
         .profile-skills-progress {
           height: 4px !important;
           background-color: #c6c6c6;
           border-radius: 0px !important;
           margin-bottom: 13px !important;
+
           .progress-bar {
-            background-color: #0675eb !important;
+            background-color: #FBBB0E !important;
             height: 100%;
           }
         }
       }
+
       .visit-portfolio-btn {
-        background: #1786ee;
+        background: #FBBB0E;
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
         border-radius: 6px;
         font-style: normal;
@@ -192,21 +216,25 @@
       }
     }
   }
+
   @keyframes anim1 {
     100% {
       stroke-dashoffset: 45;
     }
   }
+
   @keyframes anim2 {
     100% {
       stroke-dashoffset: 55;
     }
   }
+
   @keyframes anim3 {
     100% {
       stroke-dashoffset: 70;
     }
   }
+
   @keyframes anim4 {
     100% {
       stroke-dashoffset: 80;

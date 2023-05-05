@@ -1,12 +1,13 @@
-.user-profile{
+.user-profile {
     height: 250px;
-    background: linear-gradient(341.72deg, rgba(255, 255, 255, 0.5) 7.28%, rgba(255, 255, 255, 0.18) 96.36%);
-    box-shadow: 2px 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(20px);
+    background: linear-gradient(62.42deg, rgba(255, 255, 255, 0.1) 20.61%, rgba(255, 255, 255, 0) 82.27%);
+    filter: drop-shadow(2px 4px 30px rgba(0, 0, 0, 0.1));
+    backdrop-filter: blur(35px);
     border-radius: 14px;
     margin-bottom: 20px;
-    .user-profile-list{
-        .user-profile-wrapper{
+
+    .user-profile-list {
+        .user-profile-wrapper {
             padding: 20px 20px;
             text-align: center;
             display: flex;
@@ -14,9 +15,13 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            .user-role{
-                color: #786E6E;
+
+            .user-role {
+                color: #FFFFFF;
                 margin-bottom: 7px;
+            }
+            .user-name {
+                color: #FFFFFF;
             }
         }
     }

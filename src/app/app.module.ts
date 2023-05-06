@@ -15,6 +15,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { PortfolioDetailComponent } from './portfolio-detail/portfolio-detail.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainViewComponent } from './main-view/main-view.component';
+import {HashLocationStrategy, LocationStrategy} from '@angular/common'
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { MainViewComponent } from './main-view/main-view.component';
     NgCircleProgressModule.forRoot(),
     NgbModule,
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass:HashLocationStrategy}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -174,4 +174,5 @@ export class GraphicDesigningComponent implements OnInit {
     this.router.navigate(['portfolio']);
   }
 
+  
 }

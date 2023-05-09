@@ -137,7 +137,53 @@ export class GraphicDesigningComponent implements OnInit {
         { id: 24, path: 'portfolio/thumbnails/thumbnail-11.jpg' },
         { id: 24, path: 'portfolio/thumbnails/thumbnail-12.jpg' },
       ],
-      categoryHeading: 'T Shirts',
+      categoryHeading: 'Thumbnails',
+    },
+    {
+      name: 'Stationory Designs',
+      images: [
+        { id: 23, path: 'portfolio/Stationory-Design/295j-stationory.jpg' },
+        { id: 24, path: 'portfolio/Stationory-Design/kammarh-card-mockups.jpg' },
+        { id: 24, path: 'portfolio/Stationory-Design/nishi.jpg' },
+        { id: 24, path: 'portfolio/Stationory-Design/nuchi-shirt-visiting-card.jpg' },
+        { id: 24, path: 'portfolio/Stationory-Design/roclle-laatter-head.jpg' },
+        { id: 24, path: 'portfolio/Stationory-Design/Roclle-visiting-card-mockups.jpg' },
+        { id: 24, path: 'portfolio/Stationory-Design/two-sotuh-vellow-stationorey.jpg' },
+        { id: 24, path: 'portfolio/Stationory-Design/Untitled-1.jpg' },
+        { id: 24, path: 'portfolio/Stationory-Design/Untitled-2.jpg' },
+        { id: 24, path: 'portfolio/Stationory-Design/Untitled-3.jpg' },
+        { id: 24, path: 'portfolio/Stationory-Design/Untitled-4.jpg' },
+        { id: 24, path: 'portfolio/Stationory-Design/Untitled-5.jpg' },
+        { id: 24, path: 'portfolio/Stationory-Design/Untitled-6.jpg' },
+        { id: 24, path: 'portfolio/Stationory-Design/Untitled-7.jpg' },
+        { id: 24, path: 'portfolio/Stationory-Design/Untitled-8.jpg' },
+        { id: 24, path: 'portfolio/Stationory-Design/urbay-satationorey.jpg' },
+      ],
+      categoryHeading: 'Stationory Design',
+    },
+        {
+      name: 'Social Media Posts',
+      images: [
+        { id: 23, path: 'portfolio/social-media-posts/s1.jpg' },
+        { id: 23, path: 'portfolio/social-media-posts/s2.jpg' },
+        { id: 23, path: 'portfolio/social-media-posts/s3.jpg' },
+        { id: 23, path: 'portfolio/social-media-posts/s4.jpg' },
+        { id: 23, path: 'portfolio/social-media-posts/s5.jpg' },
+        { id: 23, path: 'portfolio/social-media-posts/s6.jpg' },
+        { id: 23, path: 'portfolio/social-media-posts/ss1.jpg' },
+        { id: 23, path: 'portfolio/social-media-posts/ss2.jpg' },
+        { id: 23, path: 'portfolio/social-media-posts/ss3.jpg' },
+        { id: 23, path: 'portfolio/social-media-posts/ss4.jpg' },
+        { id: 23, path: 'portfolio/social-media-posts/ss5.jpg' },
+        { id: 23, path: 'portfolio/social-media-posts/ss6.jpg' },
+        { id: 23, path: 'portfolio/social-media-posts/ss7.jpg' },
+        { id: 23, path: 'portfolio/social-media-posts/ss8.jpg' },
+        { id: 23, path: 'portfolio/social-media-posts/ss9.jpg' },
+        { id: 23, path: 'portfolio/social-media-posts/ss10.jpg' },
+        { id: 23, path: 'portfolio/social-media-posts/ss11.jpg' },
+        { id: 23, path: 'portfolio/social-media-posts/ss12.jpg' },
+      ],
+      categoryHeading: 'Social Media Posts',
     },
   ];
 
@@ -162,10 +208,15 @@ export class GraphicDesigningComponent implements OnInit {
     const id = image.id;
     const detailImages = image.detailImages;
     const bgImage = image.path;
+    const selected = {
+      ...image, // copy all properties from the original image object
+      category: this.currentCategory.images // add category property
+    };
     this.router.navigate(['portfolioDetails', id], {
       state: {
         images: detailImages,
         bgImage,
+        selected
       },
     });
   }

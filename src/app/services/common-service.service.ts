@@ -6,5 +6,6 @@ import { Injectable } from '@angular/core';
 export class CommonServiceService {
 
   public currentCategoryHeading:string = "";
+  public currentCategory:string = "";
   constructor() { }
 }

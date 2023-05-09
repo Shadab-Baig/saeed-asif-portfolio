@@ -5,12 +5,15 @@
     </button>
     <h1>Portfolio</h1>
   </div>
-  <div class="portfolio-details-hero">
+  <div class="portfolio-details-hero" *ngIf="detailImages">
     <img [src]="'assets/img/' + bgImage" alt="portfolio" />
   </div>
-  <!-- <div class="portfolio-details-hero">
-    <img src="assets/img/bannerImage.jpg" alt="" srcset="">
-  </div> -->
+  <ng-container *ngIf="selected && !detailImages">
+    <div class="portfolio-single-preview-image">
+      <img [src]="'assets/img/' + selected.path" alt="portfolio" />
+      <!-- <img *ngFor="let image of selected.category  let i = index" src="{{ 'assets/img/' + image.path }}" /> -->
+    </div>
+  </ng-container>
     <div class="portfolio-details-images-wrapper">
         <div class="portfolio-detail-image"  *ngFor="let image of detailImages" (click)="onClick($event, mymodal, image)">
           <img [src]="'assets/img/' + image.detailPathImages" alt=""/>
@@ -33,3 +36,18 @@
 
   </div>
 </ng-template>
+
+<!-- <ng-template #categoryModal let-modal>
+  <div class="modal-body">
+    <h3>{{ currentCategory.name }}</h3>
+    <div class="modal-body">
+      <img *ngFor="let image of currentCategory.images; let i = index"
+        [ngStyle]="{ display: currentImageIndex === i ? 'block' : 'none' }" [src]="'assets/img/' + image.path" />
+    </div>
+    <button id="prev-button" *ngIf="currentImageIndex !== 0" style="background-image: url('assets/img/previous.svg');" class="previousButton"
+      (click)="previousImage()">Previous</button>
+    <button id="next-button" *ngIf="currentImageIndex !== currentCategory.images.length" style="background-image: url('assets/img/next.svg');" class="nextButton"
+      (click)="nextImage()">Next</button>
+    <button id="cross-button" (click)="onClose()">Close</button>
+  </div>
+</ng-template> -->

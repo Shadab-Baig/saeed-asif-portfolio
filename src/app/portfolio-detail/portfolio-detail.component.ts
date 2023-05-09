@@ -20,13 +20,12 @@ export class PortfolioDetailComponent implements OnInit {
   public imgSrc: string | undefined;
   public closeResult: string = '';
   public bgImage: string | undefined;
-
+  public selected: any | undefined;
   public detailImages: any;
   public id: number | undefined;
   public currentImageIndex = 0;
   constructor(
     private route: ActivatedRoute,
-    private location: Location,
     private modalService: NgbModal,
     private Router: Router
   ) {}
@@ -36,6 +35,8 @@ export class PortfolioDetailComponent implements OnInit {
       this.id = +params['id'];
       this.detailImages = window.history.state.images;
       this.bgImage = window.history.state.bgImage;
+      this.selected = window.history.state.selected;
+      console.log(this.selected.category)
     });
   }
  public onClick(event: any, content: any, image:any) {

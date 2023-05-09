@@ -17,16 +17,18 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
   ],
 })
 export class PortfolioDetailComponent implements OnInit {
-  imgSrc: string | undefined;
-  closeResult: string = '';
-  bgImage: string | undefined;
+  public imgSrc: string | undefined;
+  public closeResult: string = '';
+  public bgImage: string | undefined;
 
   public detailImages: any;
   public id: number | undefined;
+  public currentImageIndex = 0;
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private Router: Router
   ) {}
 
   ngOnInit(): void {
@@ -34,12 +36,10 @@ export class PortfolioDetailComponent implements OnInit {
       this.id = +params['id'];
       this.detailImages = window.history.state.images;
       this.bgImage = window.history.state.bgImage;
-      console.log(this.id);
-      console.log(this.detailImages);
-      console.log(this.bgImage);
     });
   }
-  onClick(event: any, content: any) {
+ public onClick(event: any, content: any, image:any) {
+    this.currentImageIndex = this.detailImages.indexOf(image);
     this.modalService
       .open(content, {
         // fullscreen: true,
@@ -62,7 +62,8 @@ export class PortfolioDetailComponent implements OnInit {
     this.imgSrc = srcAttr.nodeValue;
     console.log(this.imgSrc);
   }
-  private getDismissReason(reason: any): string {
+
+  public getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
       return 'by pressing ESC';
     } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
@@ -72,7 +73,21 @@ export class PortfolioDetailComponent implements OnInit {
     }
   }
 
-  goback() {
-    this.location.back();
+  public  goback(): void {
+    this.Router.navigate(['graphic-designing']);
   }
+
+  public previousImage(): void {
+    this.currentImageIndex--;
+
+}
+  public nextImage(): void {
+  if (this.currentImageIndex < this.detailImages.length - 1) {
+    this.currentImageIndex++;
+  }
+}
+  public onClose(){
+  this.modalService.dismissAll();
+}
+
 }

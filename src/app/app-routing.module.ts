@@ -5,6 +5,8 @@ import { PortfolioComponent } from './navComponents/portfolio/portfolio.componen
 import { ContactComponent } from './navComponents/contact/contact.component';
 import { AboutComponent } from './navComponents/about/about.component';
 import { PortfolioDetailComponent } from './portfolio-detail/portfolio-detail.component';
+import { UIUXComponent } from './navComponents/ui-ux/ui-ux.component';
+import { GraphicDesigningComponent } from './navComponents/graphic-designing/graphic-designing.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'about', pathMatch: 'full' },
@@ -12,6 +14,8 @@ const routes: Routes = [
   { path: 'resume', component: ResumeComponent },
   { path: 'portfolio', component: PortfolioComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'graphic-designing', component: GraphicDesigningComponent },
+  { path: 'UI/UX', component: UIUXComponent },
   { path: 'portfolioDetails/:id', component: PortfolioDetailComponent },
 ];
 

@@ -15,8 +15,9 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { PortfolioDetailComponent } from './portfolio-detail/portfolio-detail.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainViewComponent } from './main-view/main-view.component';
-import {HashLocationStrategy, LocationStrategy} from '@angular/common'
-
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
+import { UIUXComponent } from './navComponents/ui-ux/ui-ux.component';
+import { GraphicDesigningComponent } from './navComponents/graphic-designing/graphic-designing.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,8 @@ import {HashLocationStrategy, LocationStrategy} from '@angular/common'
     AboutComponent,
     PortfolioDetailComponent,
     MainViewComponent,
+    UIUXComponent,
+    GraphicDesigningComponent,
   ],
   imports: [
     BrowserModule,

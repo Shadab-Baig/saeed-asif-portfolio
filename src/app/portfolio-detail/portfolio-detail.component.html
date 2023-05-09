@@ -12,16 +12,24 @@
     <img src="assets/img/bannerImage.jpg" alt="" srcset="">
   </div> -->
     <div class="portfolio-details-images-wrapper">
-        <div class="portfolio-detail-image"  *ngFor="let image of detailImages" (click)="onClick($event, mymodal)">
+        <div class="portfolio-detail-image"  *ngFor="let image of detailImages" (click)="onClick($event, mymodal, image)">
           <img [src]="'assets/img/' + image.detailPathImages" alt=""/>
         </div>
     </div>
 </div>
 <ng-template #mymodal let-modal>
   <div class="modal-body">
-    <img
-      src="{{ imgSrc }}"
-      class="modal-hover-opacity"
-    />
+    <ng-container >
+      <div class="modal-body">
+        <img *ngFor="let image of detailImages  let i = index"
+        [ngStyle]="{ display: currentImageIndex === i ? 'block' : 'none' }" src="{{ 'assets/img/' + image.detailPathImages }}" />
+      </div>
+      <button id="prev-button" *ngIf="currentImageIndex !== 0" style="background-image: url('assets/img/previous.svg');" class="previousButton"
+      (click)="previousImage()">Previous</button>
+      <button id="next-button" *ngIf="currentImageIndex !== detailImages.length" style="background-image: url('assets/img/next.svg');" class="nextButton"
+      (click)="nextImage()">Next</button>
+      <button id="cross-button" (click)="onClose()">close</button>
+    </ng-container>
+
   </div>
 </ng-template>

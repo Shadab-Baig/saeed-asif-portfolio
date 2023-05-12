@@ -18,6 +18,7 @@ import { MainViewComponent } from './main-view/main-view.component';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import { UIUXComponent } from './navComponents/ui-ux/ui-ux.component';
 import { GraphicDesigningComponent } from './navComponents/graphic-designing/graphic-designing.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +40,7 @@ import { GraphicDesigningComponent } from './navComponents/graphic-designing/gra
     NgProgressModule,
     NgCircleProgressModule.forRoot(),
     NgbModule,
+    FormsModule
   ],
   providers: [{provide: LocationStrategy, useClass:HashLocationStrategy}],
   bootstrap: [AppComponent],

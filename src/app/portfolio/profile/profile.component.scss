@@ -15,13 +15,25 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-
-            .user-role {
-                color: #FFFFFF;
-                margin-bottom: 7px;
+            .profile-img{
+                img{
+                border-radius: 50%;
+                }
             }
+            .user-details{     
             .user-name {
                 color: #FFFFFF;
+                margin-bottom: 10px;
+            }
+            .user-role {
+                color: #24242E;
+                font-weight: 400;
+                padding: 3px 6px;
+                background: #FBBB0E;
+            }
+            .adobe-certificate{
+                margin-top: 13px;
+            }
             }
         }
     }

@@ -188,6 +188,15 @@ export class GraphicDesigningComponent implements OnInit {
   ];
 
   currentCategory: any = this.categories[0];
+  name: string = `${this.categories[0].name}`;
+  select(selectVal: string) {
+    for (let i = 0; i < this.categories.length; i++) {
+      let token = this.categories[i].name.includes(selectVal)
+      if (token === true) {
+        this.showCategory(this.categories[i])
+      }
+    }
+  }
   ngOnInit(): void {
     const savedCategory = this.categories.find(category => category.categoryHeading === this.service.currentCategoryHeading);
     if(savedCategory){
@@ -204,14 +213,16 @@ export class GraphicDesigningComponent implements OnInit {
     }, 500);
   }
 
-  gotoDetails(image: any,) {
+  gotoDetails(image: any, i:any) {
     const id = image.id;
     const detailImages = image.detailImages;
     const bgImage = image.path;
     const selected = {
-      ...image, // copy all properties from the original image object
-      category: this.currentCategory.images // add category property
+      ...image,
+      category: this.currentCategory.images,
+      index: i 
     };
+    console.warn(selected);
     this.router.navigate(['portfolioDetails', id], {
       state: {
         images: detailImages,
@@ -225,5 +236,4 @@ export class GraphicDesigningComponent implements OnInit {
     this.router.navigate(['portfolio']);
   }
 
-  
 }

@@ -21,9 +21,15 @@ export class PortfolioDetailComponent implements OnInit {
   public closeResult: string = '';
   public bgImage: string | undefined;
   public selected: any | undefined;
+  public selectedCategory: any | undefined;
   public detailImages: any;
   public id: number | undefined;
   public currentImageIndex = 0;
+  categoryRanges:any = {
+    'Category1': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11, 12, 13, 14, 15, 16, 17, 18, 19, 20,21,22,23,24,25],
+    'Category2': [26, 27,28,29,30,31,32,33,34,35]
+  };
+  
   constructor(
     private route: ActivatedRoute,
     private modalService: NgbModal,
@@ -36,7 +42,14 @@ export class PortfolioDetailComponent implements OnInit {
       this.detailImages = window.history.state.images;
       this.bgImage = window.history.state.bgImage;
       this.selected = window.history.state.selected;
-      console.log(this.selected.category)
+      this.currentImageIndex = this.selected.index;
+
+      for (const category in this.categoryRanges) {
+        if (this.categoryRanges[category].includes(this.id)) {
+          this.selectedCategory = category;
+          break;
+        }
+      }
     });
   }
  public onClick(event: any, content: any, image:any) {
@@ -61,7 +74,6 @@ export class PortfolioDetailComponent implements OnInit {
     var target = event.target || event.srcElement || event.currentTarget;
     var srcAttr = target.attributes.src;
     this.imgSrc = srcAttr.nodeValue;
-    console.log(this.imgSrc);
   }
 
   public getDismissReason(reason: any): string {
@@ -77,15 +89,16 @@ export class PortfolioDetailComponent implements OnInit {
   public  goback(): void {
     this.Router.navigate(['graphic-designing']);
   }
+  public  gobacktoUi(): void {
+    this.Router.navigate(['UI/UX']);
+  }
 
   public previousImage(): void {
     this.currentImageIndex--;
 
 }
   public nextImage(): void {
-  if (this.currentImageIndex < this.detailImages.length - 1) {
-    this.currentImageIndex++;
-  }
+  this.currentImageIndex++;
 }
   public onClose(){
   this.modalService.dismissAll();

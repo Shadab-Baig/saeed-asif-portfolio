@@ -133,6 +133,11 @@
   
   
   @media (max-width:700px){
+    .portfolio{
+      h1{
+        font-size: 20px !important;
+      }
+    }
     .portfolio__gallery{
       flex-wrap: initial;
       gap: 0px;

@@ -12,8 +12,12 @@ export class ProfileDetailComponent implements OnInit {
   ngOnInit() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        window.scrollTo(0, 0);
+        const scrollContainer = document.querySelector('.user-profile-detail');
+        if (scrollContainer) {
+          scrollContainer.scrollTop = 0; // Scroll the container to the top
+        }
       }
     });
   }
+  
 }

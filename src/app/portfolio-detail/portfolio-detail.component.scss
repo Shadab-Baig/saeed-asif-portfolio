@@ -7,7 +7,7 @@
     align-items: center;
     margin-bottom: 30px;
     button {
-      background-color: #FBBB0E;
+      background-color: #fbbb0e;
       padding: 12px 15px;
       border-radius: 50%;
       outline: none;
@@ -17,17 +17,17 @@
       justify-content: center;
       cursor: pointer;
     }
-    h1{
+    h1 {
       font-style: normal;
       font-weight: bold;
       font-size: 31px;
-      color: #FBBB0E;
+      color: #fff;
     }
   }
   .portfolio-details-hero {
     margin: 0px 0px;
-    width:100%;
-    height:45vh;
+    width: 100%;
+    height: 45vh;
     img {
       height: 100%;
       width: 100%;
@@ -35,19 +35,28 @@
   }
   .portfolio-single-preview-image {
     margin: 0px 0px;
-    width:100%;
-    height:70vh;
+    width: 100%;
+    height: 70vh;
+    &.increase-length {
+      height: 100%;
+    }
+    &.change-width {
+      img{
+        aspect-ratio: 6/3;
+      object-fit: contain;
+      }
+    }
     .image-slider {
       height: 100%;
       width: 100%;
     }
-    .arrow-buttons{
+    .arrow-buttons {
       position: absolute;
       top: 50%;
       opacity: 0;
       transition: opacity 0.3s;
-      svg{
-        background-color: #FBBB0E;
+      svg {
+        background-color: #fbbb0e;
         padding: 12px 15px;
         border-radius: 50%;
         outline: none;
@@ -57,14 +66,14 @@
         justify-content: center;
         cursor: pointer;
       }
-      &.left-arrow{
+      &.left-arrow {
         left: 4%;
       }
-      &.right-arrow{
+      &.right-arrow {
         right: 4%;
       }
     }
-    &:hover .arrow-buttons{
+    &:hover .arrow-buttons {
       opacity: 1;
     }
   }
@@ -79,7 +88,7 @@
       flex-basis: 31%;
       height: 181px;
       cursor: pointer;
-      img{
+      img {
         width: 100%;
         height: 100%;
       }
@@ -88,55 +97,56 @@
 }
 .custom-modal {
   position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-    background: rgba(0, 0, 0, 0.84);
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.84);
   .modal-dialog {
     width: 80%;
   }
   .modal-content {
     background-color: transparent;
     border: none;
-    .modal-body{
-      img{
+    .modal-body {
+      img {
         width: 70%;
         height: 70vh;
         margin: auto;
       }
-      #prev-button{
+      #prev-button {
         font-size: 0;
-        padding: 24px 23px;
-        background-color: transparent;
         border: none;
+        background-color: #FBBB0E;
+        padding: 12px 15px;
+        border-radius: 50%;
         outline: none;
         position: absolute;
-        left: 18.5%;
+        left: 22.5%;
         top: 45%;
         background-repeat: no-repeat;
         background-size: 45px;
-        cursor:pointer;
-
+        cursor: pointer;
       }
-      #next-button{
+      #next-button {
         font-size: 0;
-        padding: 24px 23px;
-        background-color: transparent;
+        background-color: #FBBB0E;
+        padding: 12px 15px;
+        border-radius: 50%;
         border: none;
         outline: none;
         position: absolute;
-        right: 18.5%;
+        right: 22.5%;
         top: 45%;
         background-repeat: no-repeat;
         background-size: 45px;
-        cursor:pointer;
+        cursor: pointer;
       }
-      #cross-button{
-        background-image: url('/assets/img/icon-cross.svg');
+      #cross-button {
+        background-image: url("/assets/img/icon-cross.svg");
         padding: 11px 11px;
         font-size: 0;
         background-color: transparent;
@@ -155,3 +165,27 @@
 //   background: linear-gradient(109.64deg, #1d1a1f -0.28%, #2f3f4b 100%);
 //   opacity: 1;
 // }
+
+@media (max-width: 700px) {
+  .portfolio-details {
+    .portfolio-details-hero {
+      height: 20vh;
+    }
+    .portfolio-details-images-wrapper {
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
+  }
+  .modal-content {
+    .modal-body {
+      img {
+        width: 100% !important;
+        height: 35vh !important;
+      }
+    }
+    #cross-button{
+      top: 28% !important;
+      right: 10% !important;
+    }
+  }
+}

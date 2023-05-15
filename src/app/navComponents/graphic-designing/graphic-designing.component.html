@@ -15,12 +15,14 @@
           {{ category.name }}
         </button>
       </div>
-      <!-- <select class="mobile-view-categories" [(ngModel)]="name" (change)="select(name)">
-        <option *ngFor="let category of categories" [value]="category.name"
-          [selected]="currentCategory.name === category.name">
-          {{ category.name }}
-        </option>
-      </select> -->
+      <div class="mobile-view-categories">
+        <select class="mobile-view-select-options" [(ngModel)]="name" (change)="select(name)">
+          <option *ngFor="let category of categories" [value]="category.name"
+            [selected]="currentCategory.name === category.name">
+            {{ category.name }}
+          </option>
+        </select>
+      </div>
     </div>
     <div class="portfolio__gallery" [class.loading]="loading">
       <div

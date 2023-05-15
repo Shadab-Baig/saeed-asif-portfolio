@@ -18,71 +18,126 @@ export class GraphicDesigningComponent implements OnInit {
       images: [
         {
           id: 1,
-          path: 'portfolio/branding-designs/Akkamas-Sationory-Mockup/Akkamas-Staionory-Mockups.jpg',
+          path: 'portfolio/branding-designs/Bifit-Gym/bifit-gym-branding-min.jpg',
           detailImages: [
-            { detailPathImages: 'portfolio/branding-designs/Akkamas-Sationory-Mockup/akamas-t-shirts-mockups.jpg' },
-            { detailPathImages: 'portfolio/branding-designs/Akkamas-Sationory-Mockup/akamas-bottel-cap-mockups.jpg' },
-            { detailPathImages: 'portfolio/branding-designs/Akkamas-Sationory-Mockup/Akamas_Logo_Mockup_2.jpg' },
-            { detailPathImages: 'portfolio/branding-designs/Akkamas-Sationory-Mockup/Akamas_Logo_Mockup_.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Bifit-Gym/Mockup-1-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Bifit-Gym/bifit-gym-logo-2.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Bifit-Gym/bifit-gym-logo-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Bifit-Gym/t-shirt-Mockup-1.jpg' },
           ],
         },
         {
           id: 2,
-          path: 'portfolio/branding-designs/Alfreedo-tours-mockup/Alfreedo-tours_Stationery_Mockup_2.jpg',
+          path: 'portfolio/branding-designs/Brick-Lane/Stationery_Mockup-min.jpg',
           detailImages: [
-            { detailPathImages: 'portfolio/branding-designs/Alfreedo-tours-mockup/Alfreedo tours_Stationery_Mockup_ 1.jpg' },
-            { detailPathImages: 'portfolio/branding-designs/Alfreedo-tours-mockup/Alfreedo_Pin_Button_Mockup_1.jpg' },
-            { detailPathImages: 'portfolio/branding-designs/Alfreedo-tours-mockup/Alfreedo-tours-logo-mockups.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Brick-Lane/brik-lane-raelty.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Brick-Lane/brik-lane-raelty-2.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Brick-Lane/CUP_Mockup.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Brick-Lane/Coffee_Cup_Mockup_2-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Brick-Lane/Beach_Chair_Mockup_1-min.jpg' },
           ],
         },
         {
           id: 3,
-          path: 'portfolio/branding-designs/doonaa-sationory-mockups/donna-mockups-sationory.jpg',
+          path: 'portfolio/branding-designs/fitness-hub/fitness-gym-branding-min.jpg',
           detailImages: [
-            { detailPathImages: 'portfolio/branding-designs/doonaa-sationory-mockups/donna_Logo_Mockup_.jpg' },
-            { detailPathImages: 'portfolio/branding-designs/doonaa-sationory-mockups/donna-mockups.jpg' },
-            { detailPathImages: 'portfolio/branding-designs/doonaa-sationory-mockups/donna-store-with-cups-logo-mockups-2.jpg' },
-            { detailPathImages: 'portfolio/branding-designs/doonaa-sationory-mockups/donna-visiting-card-mockups.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/fitness-hub/logo-02.png' },
+            { detailPathImages: 'portfolio/branding-designs/fitness-hub/logo-2.png' },
+            { detailPathImages: 'portfolio/branding-designs/fitness-hub/fitness-jim-gym-branding-3.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/fitness-hub/fitness-gym-branding-2-min.jpg' },
           ],
         },
         {
           id: 4,
-          path: 'portfolio/branding-designs/Kamarah-resturent/kammarah-stationory-mockkups.jpg',
+          path: 'portfolio/branding-designs/Grand-Rapid-store/Stationery_Mockup_1-min.jpg',
           detailImages: [
-            { detailPathImages: 'portfolio/branding-designs/Kamarah-resturent/kammarah-logo-mockkups.jpg' },
-            { detailPathImages: 'portfolio/branding-designs/Kamarah-resturent/kammarah-wristband-mockkups-2.jpg' },
-            { detailPathImages: 'portfolio/branding-designs/Kamarah-resturent/kammarah-wristband-mockkups.jpg' },
-            { detailPathImages: 'portfolio/branding-designs/Kamarah-resturent/kammara-visiting-card-mockups.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Grand-Rapid-store/Stationery_Mockup_2-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Grand-Rapid-store/brand-rappide-logo-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Grand-Rapid-store/brand-rappide-logo-2-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Grand-Rapid-store/Gift_Bag_Mockup_1.jpg' },
           ],
         },
         {
           id: 5,
-          path: 'portfolio/branding-designs/Roclle-staionory-Mockup/Rocelle-stationory-mockups.jpg',
+          path: 'portfolio/branding-designs/Larke-home/Stationery_Mockup_1.jpg',
           detailImages: [
-            { detailPathImages: 'portfolio/branding-designs/Roclle-staionory-Mockup/Rocelle_Logo_Mockup_1.jpg' },
-            { detailPathImages: 'portfolio/branding-designs/Roclle-staionory-Mockup/Rocelle-latter-haed-mockups.jpg' },
-            { detailPathImages: 'portfolio/branding-designs/Roclle-staionory-Mockup/Rocelle-visiting-card-mockups-2.jpg' },
-            { detailPathImages: 'portfolio/branding-designs/Roclle-staionory-Mockup/roccelle-shoping-bag-mockups.jpg' },
-            { detailPathImages: 'portfolio/branding-designs/Roclle-staionory-Mockup/roccelle-shoping-bag-mockups-2.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Larke-home/Stationery_Mockup_2-min-1.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Larke-home/Stationery_Mockup_3-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Larke-home/larke-home-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Larke-home/larke-home-2-min.jpg' },
           ],
         },
         {
           id: 6,
-          path: 'portfolio/branding-designs/Shadow-Stationory-mockup/shadow-Stationary_Mockup.jpg',
+          path: 'portfolio/branding-designs/Pie-Solution/pie-solution-mockupa-min.jpg',
           detailImages: [
-            { detailPathImages: 'portfolio/branding-designs/Shadow-Stationory-mockup/Shadow-logo-1-mockups.jpg' },
-            { detailPathImages: 'portfolio/branding-designs/Shadow-Stationory-mockup/Shadow-logo-2-mockups.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Pie-Solution/pie-solution-mockupa-2-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Pie-Solution/pie-solution-mockupa-1-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Pie-Solution/pie-solutions-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Pie-Solution/pie-solutions-2-min.jpg' },
           ],
         },
         {
           id: 7,
-          path: 'portfolio/branding-designs/umer-clinic-Stationory/umer-clinic-stationory.jpg',
+          path: 'portfolio/branding-designs/Seven-six-resturent/seven-six-resturent-branding-min.jpg',
           detailImages: [
-            { detailPathImages: 'portfolio/branding-designs/umer-clinic-Stationory/umer-clinic-logo-mockups.jpg' },
-            { detailPathImages: 'portfolio/branding-designs/umer-clinic-Stationory/id-card-band.jpg' },
-            { detailPathImages: 'portfolio/branding-designs/umer-clinic-Stationory/employ-card-mockup.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Seven-six-resturent/seven-six-resturent-min-1.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Seven-six-resturent/seven-six-resturent-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Seven-six-resturent/seven-six_resturent-2-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Seven-six-resturent/Paper_Bag_Mockup_2.jpg' },
           ],
-        }
+        },
+        {
+          id: 8,
+          path: 'portfolio/branding-designs/slice-of-spice/slice-of-spice-branding.jpg',
+          detailImages: [
+            { detailPathImages: 'portfolio/branding-designs/slice-of-spice/slice-of-spice-branding-2-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/slice-of-spice/slice-of-spice-branding-3-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/slice-of-spice/slice-of-spice-Mockup-3-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/slice-of-spice/slice-of-spice-Mockup-min.jpg' },
+          ],
+        },
+        {
+          id: 9,
+          path: 'portfolio/branding-designs/sniper-stodio/sniper-stodio-branding-min.jpg',
+          detailImages: [
+            { detailPathImages: 'portfolio/branding-designs/sniper-stodio/sniper-logo-Mockups-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/sniper-stodio/cup.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/sniper-stodio/cup-2.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/sniper-stodio/Free_Logo_Mockup_4-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/sniper-stodio/sniper-stodiou-3-min.jpg' },
+          ],
+        },
+        {
+          id: 10,
+          path: 'portfolio/branding-designs/Softex-logo/softex-stationory-mockup.jpg',
+          detailImages: [
+            { detailPathImages: 'portfolio/branding-designs/Softex-logo/sotex-stationory-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Softex-logo/softex-logo-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Softex-logo/_Pen_Mockup_2.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Softex-logo/_Pen_Mockup_1.jpg' },
+          ],
+        },
+        {
+          id: 11,
+          path: 'portfolio/branding-designs/spin-the-paint/spin-the-paint-branding.jpg',
+          detailImages: [
+            { detailPathImages: 'portfolio/branding-designs/spin-the-paint/spin-the-paint-branding-card-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/spin-the-paint/spin-the-paint-Mockups-3-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/spin-the-paint/spin-the-paint-Mockups-min.jpg' },
+          ],
+        },
+        {
+          id: 12,
+          path: 'portfolio/branding-designs/Sports-big/Stationery_Mockup_1-sports-big.jpg',
+          detailImages: [
+            { detailPathImages: 'portfolio/branding-designs/Sports-big/fitness-logo-2-02-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Sports-big/_Box_3-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Sports-big/_Box_2-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Sports-big/_Box_1-min.jpg' },
+            { detailPathImages: 'portfolio/branding-designs/Sports-big/Sports-logo-Mockup-min.jpg' },
+          ],
+        },
       ],
       categoryHeading: 'Branding designs',
     },
@@ -220,9 +275,9 @@ export class GraphicDesigningComponent implements OnInit {
     const selected = {
       ...image,
       category: this.currentCategory.images,
+      selectedCategory:this.currentCategory,
       index: i 
     };
-    console.warn(selected);
     this.router.navigate(['portfolioDetails', id], {
       state: {
         images: detailImages,

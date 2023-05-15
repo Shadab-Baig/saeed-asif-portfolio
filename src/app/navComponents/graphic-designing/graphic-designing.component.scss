@@ -20,7 +20,7 @@
       font-style: normal;
       font-weight: bold;
       font-size: 31px;
-      color: #FBBB0E;
+      color: #fff;
     }
   
   }
@@ -35,23 +35,41 @@
   
   .portfolio__nav {
     margin-bottom: 3.4rem;
-  
-    .portfolio__nav--btn {
-      border: none;
-      outline: none;
-      background-color: transparent;
-      padding-right: 2.5rem;
-      text-transform: capitalize;
-      font-weight: bold;
-      font-size: 15px;
-      cursor: pointer;
-      border-radius: 2rem;
-      transition: 0.3s;
-      font-family: "Poppins", sans-serif;
-      color: #878789;
-  
-      &.active {
-        color: #FBBB0E;
+    .portfolio-categories{
+      .portfolio__nav--btn {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        padding-right: 2.5rem;
+        text-transform: capitalize;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+        border-radius: 2rem;
+        transition: 0.3s;
+        font-family: "Poppins", sans-serif;
+        color: #878789;
+    
+        &.active {
+          color: #FBBB0E;
+        }
+      }
+    }
+    .mobile-view-categories{
+      display: none;
+      .mobile-view-select-options{
+        padding: 9px 16px;
+        border-radius: 8px;
+        width: calc(100vw - 99px);
+        background-color: rgb(15, 25, 29);
+        color: #fff;
+        font-family: "Poppins", sans-serif !important;
+        cursor: pointer;
+        option{
+          background-color: rgb(15 25 29);
+          color: white;
+          padding-bottom: 1rem;
+        }
       }
     }
   }
@@ -132,8 +150,18 @@
   
   
   @media (max-width:700px){
+    .portfolio{
+      h1{
+        font-size: 20px !important;
+      }
+    }
     .portfolio__nav{
-      display: none !important;
+      .portfolio-categories{
+        display: none !important;
+      }
+      .mobile-view-categories{
+        display: block !important;
+      } 
     }
     .portfolio__gallery{
       flex-wrap: initial;

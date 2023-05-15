@@ -12,9 +12,10 @@
     <img [src]="'assets/img/' + bgImage" alt="portfolio" />
   </div>
   <ng-container *ngIf="selected && !detailImages">
-    <div class="portfolio-single-preview-image">
+    <div [ngClass]="{'increase-length': selectedCategory === 'Category2','change-width': selected && selected.selectedCategory && selected.selectedCategory.categoryHeading === 'Social Media Posts'}"  class="portfolio-single-preview-image">
       <img class="image-slider" *ngFor="let image of selected.category  let i = index" 
       [ngStyle]="{ display: currentImageIndex === i ? 'block' : 'none' }"  src="{{ 'assets/img/' + image.path }}" />
+      
       <div class="arrow-buttons left-arrow" *ngIf="currentImageIndex !== 0" (click)="previousImage()">
         <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M8.70002 14.6542L0.275015 8.02724C0.175015 7.94835 0.104015 7.86288 0.0620154 7.77084C0.0200154 7.6788 -0.000651042 7.58019 1.56251e-05 7.475C1.56251e-05 7.36981 0.0206821 7.2712 0.0620154 7.17916C0.103349 7.08712 0.174349 7.00165 0.275015 6.92276L8.70002 0.276121C8.93335 0.0920404 9.22501 0 9.57502 0C9.92502 0 10.225 0.0986148 10.475 0.295844C10.725 0.493074 10.85 0.723175 10.85 0.986148C10.85 1.24912 10.725 1.47922 10.475 1.67645L3.12502 7.475L10.475 13.2735C10.7083 13.4576 10.825 13.6846 10.825 13.9544C10.825 14.2242 10.7 14.4575 10.45 14.6542C10.2 14.8514 9.90835 14.95 9.57502 14.95C9.24168 14.95 8.95002 14.8514 8.70002 14.6542Z" fill="white"/>
@@ -25,7 +26,6 @@
         <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
           <path d="M8.70002 14.6542L0.275015 8.02724C0.175015 7.94835 0.104015 7.86288 0.0620154 7.77084C0.0200154 7.6788 -0.000651042 7.58019 1.56251e-05 7.475C1.56251e-05 7.36981 0.0206821 7.2712 0.0620154 7.17916C0.103349 7.08712 0.174349 7.00165 0.275015 6.92276L8.70002 0.276121C8.93335 0.0920404 9.22501 0 9.57502 0C9.92502 0 10.225 0.0986148 10.475 0.295844C10.725 0.493074 10.85 0.723175 10.85 0.986148C10.85 1.24912 10.725 1.47922 10.475 1.67645L3.12502 7.475L10.475 13.2735C10.7083 13.4576 10.825 13.6846 10.825 13.9544C10.825 14.2242 10.7 14.4575 10.45 14.6542C10.2 14.8514 9.90835 14.95 9.57502 14.95C9.24168 14.95 8.95002 14.8514 8.70002 14.6542Z" fill="white"/>
         </svg>
-        
       </div>
     </div>
   </ng-container>
@@ -42,13 +42,21 @@
         <img *ngFor="let image of detailImages  let i = index"
         [ngStyle]="{ display: currentImageIndex === i ? 'block' : 'none' }" src="{{ 'assets/img/' + image.detailPathImages }}" />
       </div>
-      <button id="prev-button" *ngIf="currentImageIndex !== 0" style="background-image: url('assets/img/previous.svg');" class="previousButton"
-      (click)="previousImage()">Previous</button>
-      <button id="next-button" *ngIf="currentImageIndex !== detailImages.length-1" style="background-image: url('assets/img/next.svg');" class="nextButton"
-      (click)="nextImage()">Next</button>
-      <button id="cross-button" (click)="onClose()">close</button>
+      <button id="prev-button" *ngIf="currentImageIndex !== 0" class="previousButton"
+      (click)="previousImage()">
+      <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.70002 14.6542L0.275015 8.02724C0.175015 7.94835 0.104015 7.86288 0.0620154 7.77084C0.0200154 7.6788 -0.000651042 7.58019 1.56251e-05 7.475C1.56251e-05 7.36981 0.0206821 7.2712 0.0620154 7.17916C0.103349 7.08712 0.174349 7.00165 0.275015 6.92276L8.70002 0.276121C8.93335 0.0920404 9.22501 0 9.57502 0C9.92502 0 10.225 0.0986148 10.475 0.295844C10.725 0.493074 10.85 0.723175 10.85 0.986148C10.85 1.24912 10.725 1.47922 10.475 1.67645L3.12502 7.475L10.475 13.2735C10.7083 13.4576 10.825 13.6846 10.825 13.9544C10.825 14.2242 10.7 14.4575 10.45 14.6542C10.2 14.8514 9.90835 14.95 9.57502 14.95C9.24168 14.95 8.95002 14.8514 8.70002 14.6542Z" fill="white"/>
+        </svg></button>
+      <button id="next-button" *ngIf="currentImageIndex !== detailImages.length-1" class="nextButton"
+      (click)="nextImage()">
+      <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
+        <path d="M8.70002 14.6542L0.275015 8.02724C0.175015 7.94835 0.104015 7.86288 0.0620154 7.77084C0.0200154 7.6788 -0.000651042 7.58019 1.56251e-05 7.475C1.56251e-05 7.36981 0.0206821 7.2712 0.0620154 7.17916C0.103349 7.08712 0.174349 7.00165 0.275015 6.92276L8.70002 0.276121C8.93335 0.0920404 9.22501 0 9.57502 0C9.92502 0 10.225 0.0986148 10.475 0.295844C10.725 0.493074 10.85 0.723175 10.85 0.986148C10.85 1.24912 10.725 1.47922 10.475 1.67645L3.12502 7.475L10.475 13.2735C10.7083 13.4576 10.825 13.6846 10.825 13.9544C10.825 14.2242 10.7 14.4575 10.45 14.6542C10.2 14.8514 9.90835 14.95 9.57502 14.95C9.24168 14.95 8.95002 14.8514 8.70002 14.6542Z" fill="white"/>
+      </svg>
+    </button>
+    <button id="cross-button" (click)="onClose()">close</button>
     </ng-container>
 
   </div>
 </ng-template>
 
+<!-- [ngClass]="{'change-width': selected.selectedCategory.categoryHeading === 'Social Media Posts'}" -->

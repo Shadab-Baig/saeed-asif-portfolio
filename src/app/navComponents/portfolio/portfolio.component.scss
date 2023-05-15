@@ -53,4 +53,22 @@
 }
 
 
+@media (max-width:700px){
+  .portfolio-wrapper{
+    .portfolio-heading{
+      h1{
+        padding-top: 0rem;
+        padding-left: 0rem;
+      }
+    }
+    .select-category-wrapper{
+      flex-direction: column;
+      .select-category-ui,
+      .select-category-graphics{
+        width: 100% !important;
+      }
+    }
+  }
+}
+
     

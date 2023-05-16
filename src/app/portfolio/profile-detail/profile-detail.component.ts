@@ -14,10 +14,15 @@ export class ProfileDetailComponent implements OnInit {
       if (event instanceof NavigationEnd) {
         const scrollContainer = document.querySelector('.user-profile-detail');
         if (scrollContainer) {
-          scrollContainer.scrollTop = 0; // Scroll the container to the top
+          scrollContainer.scrollTop = 0;
         }
       }
     });
   }
+isPortfolioActive(): boolean {
+  const currentUrl = this.router.url;
+  return currentUrl.includes('portfolio') || currentUrl.includes('UI/UX') || currentUrl.includes('graphic-designing');
+}
+
   
 }

@@ -61,11 +61,15 @@
         padding-left: 0rem;
       }
     }
-    .select-category-wrapper{
-      flex-direction: column;
-      .select-category-ui,
-      .select-category-graphics{
-        width: 100% !important;
+    .select-category-whole-wrapper{
+      overflow-y:auto;
+      height: auto !important;
+      .select-category-wrapper{
+        flex-direction: column;
+        .select-category-ui,
+        .select-category-graphics{
+          width: 100% !important;
+        }
       }
     }
   }

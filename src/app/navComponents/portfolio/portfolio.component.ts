@@ -13,7 +13,7 @@ export class PortfolioComponent implements OnInit {
 
   goToGraphics(){
     this.router.navigate(['graphic-designing'])
-  }
+}
   gotoUi(){
     this.router.navigate(['UI/UX'])
   }

@@ -241,3 +241,66 @@
     }
   }
 }
+
+@media (max-width:1200px) {
+  .user-profile-list-tools-wrapper{
+    .user-profile-list-tools-container{
+      .user-profile-list-tools{
+        width: 40%;
+        svg{
+          left: 19px !important;
+        }
+      }
+    }
+  }
+  .user-profile-list-skills-whole-wrapper{
+    .user-profile-skills-progressbar-wrapper{
+      margin: 10px 0 !important;
+    }
+    .visit-portfolio-btn{
+      width: 100% !important;
+      gap: 10px !important;
+      margin: 13px 0 !important;
+      span{
+        font-size: 13px !important;
+      }
+    }
+  }
+}
+
+@media (max-width:1000px){
+  .user-profile-list-tools-wrapper{
+    .user-profile-list-tools-container{
+      .user-profile-list-tools{
+        svg{
+          left: 8px !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:850px){
+  .user-profile-list{
+    padding: 15px 9px !important;
+    .user-profile-list-tools-wrapper{
+      .user-profile-list-tools-container{
+        .user-profile-list-tools{
+          svg{
+            left: 5px !important;
+          }
+        }
+      }
+    }
+    .user-profile-list-skills-whole-wrapper{
+      .visit-portfolio-btn{
+        width: 95% !important;
+        gap: 15px !important;
+        margin: 10px 0 !important;
+        img{
+            width: 30px;
+        }
+      }
+    }
+  }
+}

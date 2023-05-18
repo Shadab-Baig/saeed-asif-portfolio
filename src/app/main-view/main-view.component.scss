@@ -225,3 +225,16 @@
     display: block !important;
   }
 }
+
+
+@media (max-width:1200px) {
+.porfolio-section-wrapper{
+  width: 95% !important;
+  .porfolio-section-list{
+    width: 25% !important;
+  }
+  .porfolio-section-detail{
+    width: 73% !important;
+  }
+}
+}

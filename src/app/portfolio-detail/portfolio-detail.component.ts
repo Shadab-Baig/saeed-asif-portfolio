@@ -103,5 +103,4 @@ export class PortfolioDetailComponent implements OnInit {
   public onClose(){
   this.modalService.dismissAll();
 }
-
 }

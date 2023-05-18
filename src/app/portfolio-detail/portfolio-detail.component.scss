@@ -71,6 +71,9 @@
       }
       &.right-arrow {
         right: 4%;
+        svg{
+          transform: rotate(180deg);
+        }
       }
     }
     &:hover .arrow-buttons {
@@ -164,10 +167,6 @@
     }
   }
 }
-// .custom-backdrop.show {
-//   background: linear-gradient(109.64deg, #1d1a1f -0.28%, #2f3f4b 100%);
-//   opacity: 1;
-// }
 
 @media (max-width: 700px) {
   .portfolio-details {
@@ -178,6 +177,13 @@
       flex-wrap: nowrap;
       flex-direction: column;
     }
+    .portfolio-single-preview-image {
+      height: 46vh;
+      &.change-width {
+      height: 46vh;
+      }
+    }
+  
   }
   .modal-content {
     .modal-body {

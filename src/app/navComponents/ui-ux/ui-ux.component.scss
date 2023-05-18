@@ -153,3 +153,12 @@
     }
   }
   
+  @media (max-width:1200px){
+    .portfolio__gallery{
+      justify-content: space-between;
+      .portfolio__gallery--item{
+        width: 30% !important;
+      }
+    }
+    
+  }

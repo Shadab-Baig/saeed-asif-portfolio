@@ -58,7 +58,7 @@
     .mobile-view-categories{
       display: none;
       .mobile-view-select-options{
-        padding: 9px 16px;
+        padding: 9px 0px;
         border-radius: 8px;
         width: calc(100vw - 99px);
         background-color: rgb(15, 25, 29);
@@ -148,6 +148,17 @@
     transform: translate(-50%, -50%) scale(1.1);
   }
   
+
+
+  @media (max-width:1200px){
+    .portfolio__gallery{
+      justify-content: space-between;
+      .portfolio__gallery--item{
+        width: 30% !important;
+      }
+    }
+    
+  }
   
   @media (max-width:700px){
     .portfolio{
@@ -168,7 +179,7 @@
       gap: 0px;
       flex-direction: column;
       .portfolio__gallery--item{
-        width: 100%;
+        width: 100% !important;
         .gallery-image{
           img{
             width: 100%;
@@ -177,4 +188,3 @@
       }
     }
   }
-  

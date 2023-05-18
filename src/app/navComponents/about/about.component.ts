@@ -7,10 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  public show = true;
-  window: any = window;
-  public currentView: 'desktop' | 'tablet' | 'mobile' = 'desktop';
-
   constructor() { }
 
   ngOnInit(): void {

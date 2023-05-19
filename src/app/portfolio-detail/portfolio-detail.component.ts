@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
@@ -17,6 +17,7 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
   ],
 })
 export class PortfolioDetailComponent implements OnInit {
+  @ViewChild('myDiv') myDiv: any;
   public imgSrc: string | undefined;
   public closeResult: string = '';
   public bgImage: string | undefined;
@@ -102,5 +103,8 @@ export class PortfolioDetailComponent implements OnInit {
 }
   public onClose(){
   this.modalService.dismissAll();
+}
+scrollToTop(){
+  this.myDiv.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 }

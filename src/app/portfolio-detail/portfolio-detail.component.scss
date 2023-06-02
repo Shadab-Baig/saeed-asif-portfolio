@@ -180,6 +180,28 @@
     }
   }
 }
+.floating-button {
+  position: sticky;
+  bottom: 20px;
+  right: 20px;
+  text-align: right;
+  z-index: 999;
+}
+
+.floating-button a {
+  display: inline-block;
+  background-color: #fbbb0e;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.floating-button a:hover {
+  background-color: #c89f2e;
+}
+
 
 @media (max-width: 700px) {
   .portfolio-details {

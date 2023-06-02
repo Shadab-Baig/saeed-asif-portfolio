@@ -7,7 +7,7 @@
       <img src="assets/img/chevron.svg" alt="icon" />
     </button>
     <h1>Portfolio</h1>
-  </div>
+  </div>  
   <div class="portfolio-details-hero" *ngIf="detailImages">
     <img [src]="'assets/img/' + bgImage" alt="portfolio" />
   </div>
@@ -34,6 +34,9 @@
       </ng-container>
     </div>
   </ng-container>
+  <div class="floating-button">
+    <a [href]="selected?.webUrl" target="_blank">Live Preview</a>
+  </div>
     <div class="portfolio-details-images-wrapper">
         <div class="portfolio-detail-image"  *ngFor="let image of detailImages" (click)="onClick($event, mymodal, image)">
           <img [src]="'assets/img/' + image.detailPathImages" alt=""/>

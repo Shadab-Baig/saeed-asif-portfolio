@@ -110,12 +110,6 @@
                 animation: anim2 1s linear forwards;
               }
             }
-
-            .tools-outer-layer {
-              .tools-inner-image {
-                height: 60px;
-              }
-            }
           }
 
           &:nth-child(3) {
@@ -134,6 +128,10 @@
               width: 60px;
               height: 60px;
               border-radius: 50%;
+              img{
+                width: 30px;
+                height: 30px;
+              }
             }
           }
 
@@ -141,13 +139,6 @@
             svg {
               circle {
                 animation: anim4 1s linear forwards;
-              }
-            }
-
-            .tools-outer-layer {
-              .tools-inner-image {
-                height: 57px;
-                width: 50px;
               }
             }
           }

@@ -34,7 +34,7 @@
       </ng-container>
     </div>
   </ng-container>
-  <div class="floating-button">
+  <div class="floating-button" *ngIf="selectedCategory === 'Category2'">
     <a [href]="selected?.webUrl" target="_blank">Live Preview</a>
   </div>
     <div class="portfolio-details-images-wrapper">
